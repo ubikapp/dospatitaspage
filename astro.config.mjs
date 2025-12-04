@@ -1,10 +1,10 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import icon from "astro-icon";
-import vercel from "@astrojs/vercel";
+import vercel from "@astrojs/vercel";   // 👈 OJO: sin /serverless
 
 export default defineConfig({
-  adapter: vercel(),          // 👈 Vercel se encarga del modo (server/edge)
+  adapter: vercel(),                    // 👈 El adapter nuevo de Vercel
   integrations: [
     icon()
   ],
