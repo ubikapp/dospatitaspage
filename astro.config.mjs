@@ -1,11 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import icon from "astro-icon"; // <-- 1. AÑADE ESTA LÍNEA
+import icon from "astro-icon";
+import vercel from "@astrojs/vercel";
 
-// https://astro.build/config
 export default defineConfig({
-  // 2. AÑADE ESTA SECCIÓN COMPLETA
+  adapter: vercel(),          // 👈 Vercel se encarga del modo (server/edge)
   integrations: [
-    icon() 
-  ]
+    icon()
+  ],
 });
